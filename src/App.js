@@ -1,17 +1,8 @@
 import "./App.css"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-
-const Home = () => {
-  return <h1>hello</h1>
-}
-
-const Login = () => {
-  return <h1>Login</h1>
-}
-
-const NotFound = () => {
-  return <h1>Not Found Page</h1>
-}
+import NotFound from "./pages/NotFound"
+import Login from "./pages/Login"
+import Home from "./pages/Home"
 
 function App() {
   return (
