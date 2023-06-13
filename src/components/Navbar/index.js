@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <>
       <div className="container d-flex p-2 justify-content-between align-items-center">
-        <h1>Navbar</h1>
+        <h1 id="jokesTitle">Jokes</h1>
         <Button removePermission={removePermission} />
       </div>
       <hr className="container" />
