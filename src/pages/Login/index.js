@@ -17,10 +17,12 @@ const Login = () => {
 
   const updateName = (event) => {
     setUserName(event.target.value)
+    setErrorStatus(false)
   }
 
   const updatePassword = (event) => {
     setPassword(event.target.value)
+    setErrorStatus(false)
   }
 
   const updateVisibility = () => {
@@ -29,16 +31,24 @@ const Login = () => {
 
   const verifyAndProceed = (event) => {
     event.preventDefault()
-    const data = JSON.parse(localStorage.getItem("userDetails"))
-    if (data === null) {
-      const obj = {
-        UserName,
-        password,
+    const obj = {
+      userName: "jokes",
+      password: "jokes2023",
+    }
+    if (obj.userName === UserName) {
+      if (obj.password === password) {
+        const data = JSON.parse(localStorage.getItem("userDetails"))
+        if (data === null) {
+          localStorage.setItem("userDetails", JSON.stringify(obj))
+          navigate("/")
+        } else {
+          console.log(data)
+        }
+      } else {
+        setErrorStatus(true)
       }
-      localStorage.setItem("userDetails", JSON.stringify(obj))
-      navigate("/")
     } else {
-      console.log(data)
+      setErrorStatus(true)
     }
   }
 
