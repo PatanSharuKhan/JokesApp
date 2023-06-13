@@ -1,0 +1,18 @@
+#loginSection{
+    min-height:100vh;
+}
+
+#loginSection input{
+    height:40px;
+    border: 1px solid grey;
+    font-size: 20px;
+    color: rgb(63, 59, 59);
+}
+
+#loginSection label{
+    font-weight: bold;
+}
+
+#loginSection #checkbox{
+    width: 20px;
+}
