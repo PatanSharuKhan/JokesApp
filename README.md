@@ -14,57 +14,55 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+# Login Route
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`username:` jokes\
+`password:` jokes2023
 
-### `npm run build`
+`When login user, open login page:`\
+Will be redirected to Home page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`When new user, open login page:`\
+A form with usename and password fields, and Login button should be displayed.\
+When fields are empty and clicked on Login, error message will be displayed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`When fields are filled and clicked on login:`\
+If the details are correct, then,\
+The details will be stored in local storage, with the key "userDetails".\
+Then user will be redirected to the Home page.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If the details are wrong, then,\
+A error message will be displayed in the form.\
+On update data, the error message will be disappear.
 
-### `npm run eject`
+# Home Route
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`When new user, open Home page:`\
+Will be redirected to the login page.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`When login user, open Home page:`\
+A Navbar with title and Logout button will be displayed.
+A refresh button, to dynamically change the fresh content.
+Table containing the joke category and joke.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+`When user clicks on Logout Button:`\
+The userDetails key from localstorage will be removed and,\
+redirected to the Login page.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+# Not Found Route
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+When the path is wrong, then a image with Not Found will be displayed.\
+A Home button for Navigation.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Technologies Used
 
-### Code Splitting
+`HTML` , `CSS`, `Javascript`, `ReactJS`, `Bootstrap`, `ReactHooks`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Images Used
 
-### Analyzing the Bundle Size
+The images are taken from the internet.\
+They are not for commertial use, only for educational practise purpose, I have used.
+ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
