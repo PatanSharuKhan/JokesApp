@@ -1,5 +1,15 @@
+import "./index.css"
+import Navbar from "../../components/Navbar"
+import { useEffect } from "react"
+import { useNavigate } from "react-router-dom"
+
 const Home = () => {
-  return <h1>hello</h1>
+  const navigate = useNavigate()
+  useEffect(() => {
+    const isLogged = localStorage.getItem("userDetails") === null
+    if (isLogged) navigate("/login")
+  })
+  return <Navbar />
 }
 
 export default Home
